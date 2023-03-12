@@ -117,7 +117,7 @@ class SDSSocket:
 def init_logger():
     logger.setLevel(logging.INFO)
     #formatter = logging.Formatter(fmt="%(asctime)s %(levelname)-8s %(message)s", datefmt="%H:%M:%S")
-    formatter = logging.Formatter(fmt="%(asctime)s.%(msecs)03d %(levelname)-8s %(message)s", datefmt="%H:%M:%S,%f")
+    formatter = logging.Formatter(fmt="%(asctime)s.%(msecs)03d %(levelname)-8s %(message)s", datefmt="%H:%M:%S")
     handler = logging.StreamHandler()
     handler.setFormatter(formatter)
     logger.addHandler(handler)
@@ -129,7 +129,7 @@ def init_logger_file():
         os.makedirs(os.path.dirname(filename), exist_ok=True)
 
         #formatter = logging.Formatter(fmt="%(asctime)s %(levelname)-8s %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
-        formatter = logging.Formatter(fmt="%(asctime)s.%(msecs)03d %(levelname)-8s %(message)s", datefmt="%Y-%m-%d %H:%M:%S,%f")
+        formatter = logging.Formatter(fmt="%(asctime)s.%(msecs)03d %(levelname)-8s %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
         handler = RotatingFileHandler(os.path.abspath(Options["log"]["filename"]), mode='a', backupCount=100)
         handler.setFormatter(formatter)
         handler.suffix = '%Y%m%d'
