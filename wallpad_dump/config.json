@@ -1,9 +1,9 @@
 {
 	"version": "0.3",
-	"slug": "wallpad_dump",
-	"name": "Wallpad RS485 Packet Dump",
+	"slug": "wallpad_dump_mod",
+	"name": "Wallpad RS485 Packet Dump_mod",
 	"description": "월패드 패킷 분석을 위한 애드온입니다.",
-	"url": "https://github.com/n-andflash/ha_addons",
+	"url": "https://github.com/ohnggni/ha_addons",
 	"startup": "application",
 	"boot": "auto",
 	"arch": [ "armhf", "armv7", "aarch64", "amd64", "i386" ],
@@ -17,7 +17,7 @@
 			"port":  "/dev/ttyUSB0",
 			"baudrate": 9600,
 			"bytesize": 8,
-			"parity": "N",
+			"parity": "E",
 			"stopbits": 1
 		},
 		"socket": {
@@ -26,7 +26,7 @@
 		},
 		"log": {
 			"to_file": true,
-			"filename": "/share/wallpad_dump.log"
+			"filename": "/share/wallpad_dump_ohnggni.log"
 		}
 	},
 	"schema": {
